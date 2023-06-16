@@ -7,11 +7,17 @@
 }
 
 .cards {
-
-background-size: auto;
 justify-content: center;
 object-fit: scale-down;
 height: 100%;
+}
+
+.image {
+  background-image: url("./images/crazypercy.jpeg") !important;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
 }
 
 .gif {
@@ -20,8 +26,91 @@ height: 100%;
   object-fit: contain;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
 
-body {
+.colors {
+  height: 100vh;
+  width: 100vw;
+}
 
+.red {
+  background-image: url("https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.blue {
+  background-image: url("https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.green {
+  background-image: url("https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.orange {
+  background-image: url("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.purple {
+  background-image: url("https://media.giphy.com/media/yFQ0ywscgobJK/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+
+.red {
+  background-image: url("https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.blue {
+  background-image: url("https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.green {
+  background-image: url("https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.orange {
+  background-image: url("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.purple {
+  background-image: url("https://media.giphy.com/media/yFQ0ywscgobJK/giphy.gif");
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
 }

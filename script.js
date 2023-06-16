@@ -6,8 +6,6 @@ let oScore = JSON.parse(localStorage.getItem("newScore"));
 let oldScore = document.querySelector('h4');
 oldScore.innerText = `The last score was: ${oScore}`;
 
-// tried with gifs but they messed with the timer. 
-// Tried with pictures but had problems loading stock images from other sites so I gave up on that. took too much time.
 const COLORS = [
   "red",
   "blue",
@@ -27,9 +25,7 @@ startGame.addEventListener('click', endGame)
 function endGame (){
   window.location.reload();
 }
-// here is a helper function to shuffle an array
-// it returns the same array with values shuffled
-// it is based on an algorithm called Fisher Yates if you want ot research more
+
 function shuffle(array) {
   let counter = array.length;
 
@@ -59,11 +55,12 @@ function createDivsForColors(colorArray) {
   for (let color of colorArray) {
     // create a new div
     const newDiv = document.createElement("div");
-    newDiv.classList.add(color);
+    newDiv.classList.add("image");
     newDiv.classList.add("cards");
+    newDiv.classList.add(color);
     // newDiv.classList.add('gif');
 
-    
+
     // call a function handleCardClick when a div is clicked on
     newDiv.addEventListener("click", handleCardClick);
     // append the div to the element with an id of game
@@ -73,17 +70,17 @@ function createDivsForColors(colorArray) {
 
 // let cards = document.getElementById('game').childNodes;
 
-// TODO: Implement this function!
+
 let inGuess = false;
 let card1 = null;
-let card2 = null; 
+let card2 = null;
 let cardsTried = 0;
 let score = 0;
 const scoreBoard = document.querySelector('h3')
 
 
 function handleCardClick(event) {
-  // you can use event.target to see which element was clicked
+
 if(inGuess){
   return;
 }
@@ -91,11 +88,11 @@ if (event.target.classList.contains('attempt')){
   return;
 }
 let currentCard = event.target;
-console.log(currentCard) 
-currentCard.style.backgroundColor = currentCard.classList[0];
+// currentCard.classList.add(`${currentCard.classList[1]}`)
+// currentCard.style.backgroundColor = currentCard.classList[0];
 
-  
 if(card1 || card2 === null) {
+  currentCard.classList.remove("image")
   currentCard.classList.add("attempt");
   card1 = card1 || currentCard;
   // Had to take their example apart, now it makes sense
@@ -107,11 +104,8 @@ if(card1 || card2 === null) {
 
 if(card1 && card2) {
   inGuess = true;
-let cardColor1 = card1.className[0];
-let cardColor2 = card2.className[0];
 
-
-if (cardColor1 === cardColor2){
+if (card1.classList[1] == card2.classList[1]){
 cardsTried += 2;
 card1.removeEventListener('click', handleCardClick);
 card2.removeEventListener('click', handleCardClick);
@@ -120,10 +114,11 @@ card2 = null;
 inGuess = false;
 } else {
   setTimeout(function() {
-    card1.style.backgroundColor = "";
-    card2.style.backgroundColor = "";
+    console.log("don't match");
     card1.classList.remove("attempt");
     card2.classList.remove("attempt");
+    card1.classList.add("image");
+    card2.classList.add("image");
     score += 10;
     card1 = null;
     card2 = null;
