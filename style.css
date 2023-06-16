@@ -4,6 +4,11 @@
   height: 200px;
   margin: 10px;
   display: inline-block;
+  justify-content: center;
+}
+
+body {
+  background-color: ;
 }
 
 .cards {
@@ -30,8 +35,8 @@ height: 100%;
 }
 
 .colors {
-  height: 100vh;
-  width: 100vw;
+ justify-content: center;
+ text-align: center;
 }
 
 .red {
@@ -113,4 +118,50 @@ height: 100%;
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: 1;
+}
+
+/* Gradient Background */
+
+.gradient-bg {
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #FBB040, #23D5AB, #23A6D5);
+background-size: 500% 500%;
+-webkit-animation: Gradient 10s ease infinite;
+-moz-animation: Gradient 10s ease infinite;
+animation: Gradient 10s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+@-moz-keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+@keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
 }
