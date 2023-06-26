@@ -58,8 +58,6 @@ function createDivsForColors(colorArray) {
     newDiv.classList.add("image");
     newDiv.classList.add("cards");
     newDiv.classList.add(color);
-    // newDiv.classList.add('gif');
-
 
     // call a function handleCardClick when a div is clicked on
     newDiv.addEventListener("click", handleCardClick);
@@ -114,7 +112,6 @@ card2 = null;
 inGuess = false;
 } else {
   setTimeout(function() {
-    console.log("don't match");
     card1.classList.remove("attempt");
     card2.classList.remove("attempt");
     card1.classList.add("image");
