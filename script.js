@@ -73,7 +73,7 @@ let inGuess = false;
 let card1 = null;
 let card2 = null;
 let cardsTried = 0;
-let score = 0;
+let score = 100;
 const scoreBoard = document.querySelector('h3')
 
 
@@ -116,7 +116,7 @@ inGuess = false;
     card2.classList.remove("attempt");
     card1.classList.add("image");
     card2.classList.add("image");
-    score += 10;
+    score -= 10;
     card1 = null;
     card2 = null;
     inGuess = false;
